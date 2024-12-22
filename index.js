@@ -10,7 +10,7 @@ const chalk = require('chalkercli');
 const chalk1 = require('chalk');
 const CFonts = require('cfonts');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2006;
 const moment = require("moment-timezone");
 var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss || D/MM/YYYY");
 var thu = moment.tz('Asia/Ho_Chi_Minh').format('dddd');
@@ -28,12 +28,6 @@ if (thu == 'Saturday') thu = '𝐓𝐡𝐮̛́ 𝐁𝐚̉𝐲'
 console.log('ㅤㅤㅤㅤ            𝐇𝐨̂𝐦 𝐧𝐚𝐲 𝐥𝐚̀:' +  thu,'𝐂𝐡𝐮́𝐜 𝐛𝐚̣𝐧 𝐜𝐨́ 𝐦𝐨̣̂𝐭 𝐧𝐠𝐚̀𝐲 𝐯𝐮𝐢 𝐯𝐞̉\n' )
 
 
-
-app.get('/', function(req, res) {
-
-    res.sendFile(path.join(__dirname, '/index.html'));
-
-});
 
 
 app.listen(port);
